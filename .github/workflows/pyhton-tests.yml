@@ -29,4 +29,8 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest ./tests/test_example.py -n auto  # Run tests using all available CPUs
+          coverage run -m pytest ./tests/test_example.py -n auto
+
+      - name: Generate Coverage Report
+        run: |
+          coverage report -m
