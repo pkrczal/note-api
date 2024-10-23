@@ -30,9 +30,3 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest --cov=./ --cov-report=xml --cov-report=term-missing -n auto ./tests
-
-      - name: Generate Coverage Report
-        run: |
-          coverage report -m
-          coverage xml -o coverage.xml
-          coverage html -d coverage_html_report
