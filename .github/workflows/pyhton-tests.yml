@@ -41,8 +41,6 @@ jobs:
       - name: Snyk Security Scan
         uses: snyk/actions/python@master
         with:
-          args:
-            - file=requirements.txt;
-              file=requirements-dev.txt
+          args: ["--file=requirements.txt; --file=requirements-dev.txt"]
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
