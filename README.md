@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/github/pkrczal/note-api/graph/badge.svg?token=ECEO87EU8W)](https://codecov.io/github/pkrczal/note-api)
+
 # Note API
 
 A demo API for DevSecOps training.
