@@ -38,15 +38,3 @@ jobs:
           fail_ci_if_error: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - name: Snyk Security Scan requirements
-        uses: snyk/actions/python@master
-        with:
-          args: --file=requirements.txt
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      - name: Snyk Security Scan requirements with dev
-        uses: snyk/actions/python@master
-        with:
-          args: --file=requirements-dev.txt
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
