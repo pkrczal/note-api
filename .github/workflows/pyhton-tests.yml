@@ -38,11 +38,6 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-  security-tests:
-    needs: test
-    runs-on: ubuntu-latest
-
-    steps:
       - name: snyk tests for vulnerabilities
         uses: snyk/actions/python@master
         env:
