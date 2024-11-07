@@ -60,7 +60,7 @@ jobs:
           args: --sarif-file-output=snyk.sarif
 
   build-and-push-docker:
-    needs: test
+    needs: security-tests
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
