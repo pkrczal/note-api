@@ -38,6 +38,16 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
+  security-tests:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
       - name: snyk tests for vulnerabilities
         uses: snyk/actions/python@master
         env:
